@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="filetest.cpp" />
+    <ClCompile Include="tasksystem\tokenstreamgenerator.cpp">
+      <Filter>tasksystem</Filter>
+    </ClCompile>
+    <ClCompile Include="tasksystem\executioncontext.cpp">
+      <Filter>tasksystem</Filter>
+    </ClCompile>
+    <ClCompile Include="tasksystem\dependency.cpp">
+      <Filter>tasksystem</Filter>
+    </ClCompile>
+    <ClCompile Include="concurrency\interlockedinteger.cpp">
+      <Filter>concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="concurrency\mutex.cpp">
+      <Filter>concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="concurrency\thread.cpp">
+      <Filter>concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="tasksystem\task.cpp">
+      <Filter>tasksystem</Filter>
+    </ClCompile>
+    <ClCompile Include="tasksystem\worker.cpp">
+      <Filter>tasksystem</Filter>
+    </ClCompile>
+    <ClCompile Include="tasksystem\taskqueue.cpp">
+      <Filter>tasksystem</Filter>
+    </ClCompile>
+    <ClCompile Include="templatelibrary\graph\templategraph.cpp">
+      <Filter>templatelibrary\graph</Filter>
+    </ClCompile>
+    <ClCompile Include="tasksystem\taskgraphinstance.cpp">
+      <Filter>tasksystem</Filter>
+    </ClCompile>
+    <ClCompile Include="tasksystem\rungraphtask.cpp">
+      <Filter>tasksystem</Filter>
+    </ClCompile>
+    <ClCompile Include="allocators\poolallocator.cpp">
+      <Filter>allocators</Filter>
+    </ClCompile>
+    <ClCompile Include="futuretest.cpp" />
+    <ClCompile Include="concurrency\event.cpp">
+      <Filter>concurrency</Filter>
+    </ClCompile>
+    <ClCompile Include="futures\task.cpp">
+      <Filter>futures</Filter>
+    </ClCompile>
+    <ClCompile Include="futures\taskqueue.cpp">
+      <Filter>futures</Filter>
+    </ClCompile>
+    <ClCompile Include="futures\worker.cpp">
+      <Filter>futures</Filter>
+    </ClCompile>
+    <ClCompile Include="futures\continuationtask.cpp">
+      <Filter>futures</Filter>
+    </ClCompile>
+    <ClCompile Include="futures\futurestatebase.cpp">
+      <Filter>futures</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="templatelibrary\issame.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\if.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\max.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\templatelist.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\templatelistfunctions.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\templatelistdeclaration.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\templatelistcontainer.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\inttemplatelist.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\inttemplatelistdeclaration.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\inttemplatelistfunctions.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\tokenstreamgenerator.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\executioncontext.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\dependency.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrency\interlockedinteger.h">
+      <Filter>concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrency\mutex.h">
+      <Filter>concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrency\thread.h">
+      <Filter>concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\tokenheader.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\tokens.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\starttoken.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\endtoken.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\queuetasktoken.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\graph\constructparentnodelist.h">
+      <Filter>templatelibrary\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\graph\containsdependentnodeid.h">
+      <Filter>templatelibrary\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\graph\node.h">
+      <Filter>templatelibrary\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\graph\constructinitialnodelist.h">
+      <Filter>templatelibrary\graph</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\graphnode.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\task.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\worker.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\taskqueue.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\taskinstance.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\taskgraph.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\statictaskgraph.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\taskgraphinstance.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="tasksystem\rungraphtask.h">
+      <Filter>tasksystem</Filter>
+    </ClInclude>
+    <ClInclude Include="allocators\poolallocator.h">
+      <Filter>allocators</Filter>
+    </ClInclude>
+    <ClInclude Include="concurrency\event.h">
+      <Filter>concurrency</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\task.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\taskqueue.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\worker.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\removereference.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="templatelibrary\evaluatelambdatypes.h">
+      <Filter>templatelibrary</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\continuationtask.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\futurestate.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\futurestatebase.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\move.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\isfuture.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\impl\futurethengenerator.h">
+      <Filter>futures\impl</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\future.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\packagedtask.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\async.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+    <ClInclude Include="futures\join.h">
+      <Filter>futures</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="concurrency">
+      <UniqueIdentifier>{4007c723-2e0c-4c68-9acb-52fb571f8d26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="templatelibrary">
+      <UniqueIdentifier>{4b561977-a8e1-4d2b-af8e-07547474780c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tasksystem">
+      <UniqueIdentifier>{48e23585-0cea-4880-9ddb-703793b1c484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="templatelibrary\graph">
+      <UniqueIdentifier>{5e0b8376-a2ef-4526-ab79-720c8d1ab9ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="allocators">
+      <UniqueIdentifier>{1dfbb499-10fa-4039-ab64-c412743d3449}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="futures">
+      <UniqueIdentifier>{25cafb47-717c-4721-9c19-45413f13b8cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="futures\impl">
+      <UniqueIdentifier>{24d1f27b-d542-41aa-a506-7f97a91aaf56}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

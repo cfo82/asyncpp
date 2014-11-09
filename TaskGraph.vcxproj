@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{95DDF74E-FC19-4A36-B8BB-C3B7C54D4FAB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TaskGraph</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120_CTP_Nov2012</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="allocators\poolallocator.cpp" />
+    <ClCompile Include="concurrency\event.cpp" />
+    <ClCompile Include="concurrency\interlockedinteger.cpp" />
+    <ClCompile Include="concurrency\mutex.cpp" />
+    <ClCompile Include="concurrency\thread.cpp" />
+    <ClCompile Include="filetest.cpp" />
+    <ClCompile Include="futures\continuationtask.cpp" />
+    <ClCompile Include="futures\futurestatebase.cpp" />
+    <ClCompile Include="futures\task.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)\task1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)/task1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="futures\taskqueue.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)\taskqueue1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)/taskqueue1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="futures\worker.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)\worker1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)/worker1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="futuretest.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="tasksystem\dependency.cpp" />
+    <ClCompile Include="tasksystem\executioncontext.cpp" />
+    <ClCompile Include="tasksystem\rungraphtask.cpp" />
+    <ClCompile Include="tasksystem\task.cpp" />
+    <ClCompile Include="tasksystem\taskgraphinstance.cpp" />
+    <ClCompile Include="tasksystem\taskqueue.cpp" />
+    <ClCompile Include="tasksystem\tokenstreamgenerator.cpp" />
+    <ClCompile Include="tasksystem\worker.cpp" />
+    <ClCompile Include="templatelibrary\graph\templategraph.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="allocators\poolallocator.h" />
+    <ClInclude Include="concurrency\event.h" />
+    <ClInclude Include="concurrency\interlockedinteger.h" />
+    <ClInclude Include="concurrency\mutex.h" />
+    <ClInclude Include="concurrency\thread.h" />
+    <ClInclude Include="futures\async.h" />
+    <ClInclude Include="futures\continuationtask.h" />
+    <ClInclude Include="futures\future.h" />
+    <ClInclude Include="futures\futurestate.h" />
+    <ClInclude Include="futures\futurestatebase.h" />
+    <ClInclude Include="futures\impl\futurethengenerator.h" />
+    <ClInclude Include="futures\isfuture.h" />
+    <ClInclude Include="futures\join.h" />
+    <ClInclude Include="futures\move.h" />
+    <ClInclude Include="futures\packagedtask.h" />
+    <ClInclude Include="futures\task.h" />
+    <ClInclude Include="futures\taskqueue.h" />
+    <ClInclude Include="futures\worker.h" />
+    <ClInclude Include="tasksystem\dependency.h" />
+    <ClInclude Include="tasksystem\endtoken.h" />
+    <ClInclude Include="tasksystem\executioncontext.h" />
+    <ClInclude Include="tasksystem\graphnode.h" />
+    <ClInclude Include="tasksystem\queuetasktoken.h" />
+    <ClInclude Include="tasksystem\rungraphtask.h" />
+    <ClInclude Include="tasksystem\starttoken.h" />
+    <ClInclude Include="tasksystem\statictaskgraph.h" />
+    <ClInclude Include="tasksystem\task.h" />
+    <ClInclude Include="tasksystem\taskgraph.h" />
+    <ClInclude Include="tasksystem\taskgraphinstance.h" />
+    <ClInclude Include="tasksystem\taskinstance.h" />
+    <ClInclude Include="tasksystem\taskqueue.h" />
+    <ClInclude Include="tasksystem\tokenheader.h" />
+    <ClInclude Include="tasksystem\tokens.h" />
+    <ClInclude Include="tasksystem\tokenstreamgenerator.h" />
+    <ClInclude Include="tasksystem\worker.h" />
+    <ClInclude Include="templatelibrary\evaluatelambdatypes.h" />
+    <ClInclude Include="templatelibrary\graph\constructinitialnodelist.h" />
+    <ClInclude Include="templatelibrary\graph\constructparentnodelist.h" />
+    <ClInclude Include="templatelibrary\graph\containsdependentnodeid.h" />
+    <ClInclude Include="templatelibrary\graph\node.h" />
+    <ClInclude Include="templatelibrary\if.h" />
+    <ClInclude Include="templatelibrary\inttemplatelist.h" />
+    <ClInclude Include="templatelibrary\inttemplatelistdeclaration.h" />
+    <ClInclude Include="templatelibrary\inttemplatelistfunctions.h" />
+    <ClInclude Include="templatelibrary\issame.h" />
+    <ClInclude Include="templatelibrary\max.h" />
+    <ClInclude Include="templatelibrary\removereference.h" />
+    <ClInclude Include="templatelibrary\templatelist.h" />
+    <ClInclude Include="templatelibrary\templatelistcontainer.h" />
+    <ClInclude Include="templatelibrary\templatelistdeclaration.h" />
+    <ClInclude Include="templatelibrary\templatelistfunctions.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
